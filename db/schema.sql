@@ -1,16 +1,16 @@
-drop database if exists ecommerce_db;
-create database if not exists ecommerce_db;
-use ecommerce_db;
+drop database if exists ecommerce_db1;
+create database if not exists ecommerce_db1;
+use ecommerce_db1;
 
 create table Category (
 	id int not null auto_increment,
-    category_name varchar(30),
+    category_name varchar(50),
     primary key (id)
 );
 
 create table Product (
 	id int not null auto_increment,
-    product_name varchar(30),
+    product_name varchar(50),
     price decimal(20,2) not null,
     stock int not null,
     category_id int,
@@ -20,7 +20,7 @@ create table Product (
 
 create table Tag (
 	id int not null auto_increment,
-    tag_name varchar(30),
+    tag_name varchar(50),
     primary key (id)
 );
 
